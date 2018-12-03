@@ -1,0 +1,57 @@
+{
+  "name": "QualRole",
+  "version": "1.0.0",
+  "description": "Busca de locais por perto e recebimento de notificações.",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "jest",
+    "testCode": "standard && node src/server.js",
+    "lint": "eslint ./src --fix --ignore-path .gitignore",
+    "prepare": "node prepare-swagger-ui"
+  },
+  "standard": {
+    "ignore": [
+      "/static/",
+      "prepare-swagger-ui.js"
+    ]
+  },
+  "author": "Nathan Carlos <nathan324116@gmail.com>",
+  "license": "All rights reserved @ AlphaTechnologies",
+  "jest": {
+    "collectCoverage": true,
+    "coverageReporters": [
+      "json",
+      "html"
+    ],
+    "verbose": true
+  },
+  "dependencies": {
+    "aws-sdk": "^2.344.0",
+    "azure-storage": "^2.10.2",
+    "dotenv": "^6.1.0",
+    "fastify": "^1.8.0",
+    "fastify-cors": "^0.2.0",
+    "fastify-jwt": "^0.7.0",
+    "fastify-multipart": "^0.5.1",
+    "fastify-swagger": "^0.15.3",
+    "fs-extra": "^7.0.1",
+    "jsonwebtoken": "^8.3.0",
+    "md5": "^2.2.1",
+    "moment": "^2.22.2",
+    "mysql2": "^1.6.4",
+    "pump": "^3.0.0",
+    "request": "^2.87.0",
+    "request-promise": "^4.2.2",
+    "sequelize": "^4.41.0",
+    "swagger-ui": "^3.20.1",
+    "swagger-ui-dist": "^3.20.1"
+  },
+  "devDependencies": {
+    "eslint": "^5.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^21.18.0",
+    "jest": "^23.4.2",
+    "sinon": "^6.1.5",
+    "standard": "^12.0.1"
+  }
+}

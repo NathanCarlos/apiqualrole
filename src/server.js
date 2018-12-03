@@ -1,7 +1,7 @@
 require('dotenv').config()
 const fastify = require('fastify')({ logger: true })
 const routes = require('./routes/index')
-const port = 3000
+const port = process.env.SERVER_PORT || 8081
 
 fastify.register(require('fastify-swagger'), {
   exposeRoute: true,
@@ -11,7 +11,7 @@ fastify.register(require('fastify-swagger'), {
       title: 'QualRole',
       version: '0.1.0'
     },
-    host: 'localhost:3000',
+    // host: 'localhost:3000',
     schemes: ['http'],
     consumes: ['application/json'],
     produces: ['application/json'],
@@ -36,7 +36,7 @@ const start = async () => {
       fastify.swagger()
     })
 
-    await fastify.listen(port)
+    await fastify.listen(port, '0.0.0.0')
     await fastify.log.info(`server listening on ${fastify.server.address().port}`)
   } catch (err) {
     fastify.log.error(err)

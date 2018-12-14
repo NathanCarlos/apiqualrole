@@ -1,3 +1,3 @@
-# Shelf API
+# QualRole API
 
-Responsável pela coleta de fotos da gôndola, alocação das imagens em serviço de armazenamento, implementação de regras de ruptura e notificação dos usuários quando há ocorrência.
+Responsávelp por salvar as informações dos usuários, tais como perfil, preferência entre outros.

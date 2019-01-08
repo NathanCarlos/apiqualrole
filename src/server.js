@@ -1,7 +1,7 @@
 require('dotenv').config()
 const fastify = require('fastify')({ logger: true })
 const routes = require('./routes/index')
-const port = process.env.SERVER_PORT || 8081
+const port = process.env.SERVER_PORT || 3000
 
 fastify.register(require('fastify-swagger'), {
   exposeRoute: true,
